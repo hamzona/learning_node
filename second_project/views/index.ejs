@@ -1,0 +1,19 @@
+ <%- include("includes/head.ejs")%>
+ <script src="/js/script.js" defer></script>
+ </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/addProduct">add produkt</a>
+
+
+<% if(products.length===0){ %>
+<div>There are no products</div>
+<% } else { %>
+  <ul>
+    <% for(const product of products) {%>
+<%- include("includes/product.ejs", {product}) %>
+<% } %>
+  </ul>
+<% } %>
+  </body>
+</html>
