@@ -1,22 +1,21 @@
  <%- include("includes/head.ejs")%>
  <script src="/js/script.js" defer></script>
- <link rel="stylesheet" href="../public/css/list.css">
+ <link rel="stylesheet" href="/css/list.css">
  </head>
   <body>
     <%- include("includes/nav.ejs")%>
+    <div class="list">
+      <h1 class="list_header">List of products</h1>
+      <% if(products.length===0){ %>
+        <div class="list_header">There are no products</div>
+      <% } else { %>
+      <ul class="list_list">
+        <% for(const product of products) {%>
+          <%- include("includes/product.ejs", {product}) %>
+        <% } %>
+      </ul>
+      <% } %>
+    </div>
 
-    <h1><%= title %></h1>
-    <a href="/admin/addProduct">add produkt</a>
-
-
-<% if(products.length===0){ %>
-<div>There are no products</div>
-<% } else { %>
-  <ul>
-    <% for(const product of products) {%>
-<%- include("includes/product.ejs", {product}) %>
-<% } %>
-  </ul>
-<% } %>
   </body>
 </html>

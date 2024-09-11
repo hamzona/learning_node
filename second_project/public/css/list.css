@@ -1,0 +1,48 @@
+.list{
+    max-width: 480px;
+    margin:auto;
+}
+.list_header{
+    text-align: center;
+}
+.list_list{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    gap: 3rem;
+}
+
+.list_list-item{
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 4px 5px 10px -6px #000;
+}
+
+.list_list-item h1{
+    color:  rgb(160, 160, 255);
+    font-size: 2.5rem;
+}
+
+.list_list-item h3{
+   color: rgba(0, 0, 0, 0.774);
+   font-size: 1.4rem;
+}
+
+.list_list-item button, .list_list-item a{
+    all: unset;
+    background-color: rgb(160, 160, 255) ;
+    padding:  0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.list_list-item button:hover, 
+.list_list-item a:hover{
+    background-color: rgb(89, 89, 165) ;
+    transition:0.4s;
+}
