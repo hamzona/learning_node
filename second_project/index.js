@@ -15,12 +15,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const productRoutes = require("./routes/products.routes");
 const adminRoutes = require("./routes/admin.routes");
+const cartRoutes = require("./routes/cart.routes");
+
+const errorController = require("./controllers/error.controllers");
 
 app.use(productRoutes);
 app.use(adminRoutes);
+app.use(cartRoutes);
 
-app.get("*", (req, res) => {
-	const error = { message: "Not found" };
-	res.render("error.ejs", { pageTitle: "Error", error });
-});
+app.get("*", errorController.get404);
 app.listen(5000);

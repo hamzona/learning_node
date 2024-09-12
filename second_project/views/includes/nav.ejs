@@ -1,7 +1,10 @@
 <nav class="nav">
     <h1 class="title">Online <span>shop</span></h1>
     <div class="links">
-        <a href="/products">Products</a>
-        <a href="/admin/addProduct">Add product</a>
+        <a class="<%= path=== '/products'?'active':'' %>" href="/products">Products</a>
+        <a class="<%= path=== '/cart'?'active':'' %>" href="/cart">Cart</a>
+        <a class="<%= path=== '/admin/products'?'active':'' %>" href="/admin/products">Admin products</a>
+        <a class="<%= path=== '/admin/orders'?'active':'' %>" href="/admin/orders">Orders</a>
+        <a class="<%= path=== '/admin/addProduct'?'active':'' %>"  href="/admin/addProduct">Add product</a>
     </div>
 </nav>
