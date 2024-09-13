@@ -10,8 +10,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const blogsRoutes = require("./routes/blogs.routes");
 const adminRoutes=require("./routes/admin.routes")
+const commentRoutes=require("./routes/comment.routes")
 
 app.use(blogsRoutes);
 app.use(adminRoutes)
+app.use(commentRoutes)
 
 app.listen(5000);

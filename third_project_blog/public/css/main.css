@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Inria Sans", sans-serif;
 }
+
+body{
+  overflow-x: hidden;
+}
 :root {
   --main-color: rgb(255, 185, 33);
 }

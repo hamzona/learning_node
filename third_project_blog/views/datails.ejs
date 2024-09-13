@@ -1,8 +1,16 @@
-<%- include("includes/head.ejs")%>
-</head>
-<body>
-    <%- include("includes/nav.ejs") %>
-    <h1>Datails</h1>
+<%- include("includes/head.ejs") %>
+    </head>
 
-</body>
-</html>
+    <body>
+        <%- include("includes/nav.ejs") %>
+            <h1>Datails</h1>
+            <h1>
+               title: <%= blog.title %>
+            </h1>
+            <h3>
+             content:   <%= blog.content %>
+            </h3>
+            <%- include("includes/comments.ejs",{comments}) %>
+    </body>
+
+    </html>

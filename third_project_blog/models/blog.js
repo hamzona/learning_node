@@ -1,8 +1,10 @@
 const path = require("path");
 const fs = require("fs");
-const {v4}=require("uuid")
+const { v4 } = require("uuid")
 
 const p = path.join(__dirname, "..", "data", "blogs.json");
+
+const Comment = require("../models/comment")
 
 const getBlogs = (cb) => {
   fs.readFile(p, (err, blogs) => {
@@ -16,14 +18,12 @@ module.exports = class Blog {
     this.content = content;
   }
   save() {
-    const d=new Date();
-    console.log(d.getMinutes())
     const blog = {
-      id:v4(),
+      id: v4(),
       title: this.title,
       content: this.content,
-      date: d.getMinutes(),
     };
+    Comment.createDefaultComment(blog.id)
     getBlogs((blogs) => {
       blogs.push(blog);
       fs.writeFile(p, JSON.stringify(blogs), (err) => {
@@ -35,5 +35,10 @@ module.exports = class Blog {
   }
   static fetchAll(cb) {
     getBlogs(cb);
+  }
+  static fetchById(id, cb) {
+    getBlogs(blogs => {
+      cb(blogs.find(blog => blog.id === id))
+    })
   }
 };

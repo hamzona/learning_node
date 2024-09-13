@@ -1,0 +1,14 @@
+<h1>Comment</h1>
+
+<form action="/postComment/<%= comments.id%>" method="post">
+    <input name="content" type="text">
+    <button>POST</button>
+</form>
+<% if(comments.content.length===0){%>
+    <h1>There is no comments on this blog</h1>
+    <%}else{%>
+        <% for(const comment of comments.content) {%>
+            <div class="comment_list">
+                <div class="comment_content"><%=comment %></div>
+            </div>
+            <% }}%>
