@@ -1,0 +1,10 @@
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comment-container{
+    margin-top: 3rem;
+}

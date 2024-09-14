@@ -6,7 +6,6 @@ const route = require("express").Router();
 const p = path.join(__dirname, "..", "data", "blogs.json");
 
 const Blog = require("../models/blog");
-const Comment = require("../models/comment")
 route.get("/admin/postBlog", (req, res) => {
   res.render("postBlog", { pageTitle: "Post blog" });
 });
