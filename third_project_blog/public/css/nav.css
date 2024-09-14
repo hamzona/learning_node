@@ -1,0 +1,22 @@
+.nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.nav .title {
+  font-size: 2.5rem;
+}
+
+.nav .links a {
+  all: unset;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+}
+
+.nav .links a:hover {
+  transition: 200ms ease-in-out;
+  color: rgb(255, 185, 33);
+  border-bottom: 2px solid rgb(255, 185, 33);
+}

@@ -1,0 +1,17 @@
+<%- include("includes/head.ejs")%>
+<link rel="stylesheet" href="/css/home.css">
+<script src="/js/script.js" defer></script>
+</head>
+<body>
+    <%- include("includes/nav.ejs") %>
+    <h1 class="title">List of blogs</h1>
+    <div class="list">
+        <% if(blogs.length===0){%>
+            <h1>There is no blogs</h1>
+            <%}else{ %>
+        <% for(const blog of blogs){ %>
+           <%- include("includes/blog.ejs",{blog}) %>
+        <% } }%>
+    </div>
+</body>
+</html>

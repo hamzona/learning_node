@@ -1,0 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inria Sans", sans-serif;
+}
+:root {
+  --main-color: rgb(255, 185, 33);
+}

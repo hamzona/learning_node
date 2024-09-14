@@ -5,8 +5,6 @@ const { v4 } = require("uuid");
 
 const app = express();
 
-const databasePath = path.join(__dirname, "data", "products.json");
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 

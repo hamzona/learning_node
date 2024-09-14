@@ -1,0 +1,19 @@
+<%- include("includes/head.ejs")%>
+<link rel="stylesheet" href="/css/postBlog.css">
+</head>
+<body>
+    <%- include("includes/nav.ejs") %>
+    <h1>Post blog</h1>
+    <form class="form" action="/admin/postBlog" method="post">
+        <div class="inputs">
+            <label for="title">Title</label>
+            <input class="input" name="title" type="text"/>
+        </div>
+        <div class="inputs">
+            <label for="content">Content</label>
+            <textarea class="input" name="content"></textarea>
+        </div>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</body>
+</html>
